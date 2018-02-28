@@ -83,6 +83,6 @@ Video Game Community Hub
     *COMPLETE* - video_games/new.html.erb (also edit.html.erb)
     *COMPLETE* - tags/new.html.erb (also edit.html.erb)
     *COMPLETE* - reviews/new.html.erb (also edit.html.erb)
-    - video_games/show.html
-    - tags/show.html
+    *COMPLETE* - video_games/show.html
+    *COMPLETE* - tags/show.html
     - reviews/show.html
