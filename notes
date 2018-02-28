@@ -2,28 +2,41 @@ Video Game Community Hub
 
 1. Rails Framework for Users, Video Games, Tags, and Reviews.
 
-  - Migrations
-    a) User Table: Email, Password, Nickname
-    b) Video Game: Title, Year Released, Genre, Console, User ID
-    c) Tags: Title, Video Game ID
-    d) Review: Title, Rating, Content, User ID, Video Game ID
+  a) Migrations
+    - User Table: Email, Password, Nickname
+    - Video Game: Title, Year Released, Genre, Console, User ID
+    - Tags: Title, Video Game ID
+    - Review: Title, Rating, Content, User ID, Video Game ID
 
-  - Models
-    a) User has many Video Games
-    b) User has many Reviews
-    c) Video Game belongs to User
-    d) Video Game has many Tags
-    e) Video Game has many Users, through Reviews
-    f) Tag belongs to Video Game
-    g) Review belongs to User
-    h) Review belongs to Video Game
+  b) Models
+    *COMPLETE* - User has many Video Games
+    *COMPLETE* - User has many Reviews
+    *COMPLETE* - Video Game belongs to User
+    *COMPLETE* - Video Game has many Tags
+    *COMPLETE* - Video Game has many Users, through Reviews
+    *COMPLETE* - Tag belongs to Video Game
+    *COMPLETE* - Review belongs to User
+    *COMPLETE* - Review belongs to Video Game
 
 2. Continue building Rails Framework for Users, Video Games, Tags, and Reviews.
-  - Controllers
-    a) Welcome Controller - Controls Root route
-    b) Sessions Controller - Controls Login/Logout routes
-    c) Users Controller - Controls User Account Creation/Management/Deletion routes
-    d) VideoGames Controller - Restful Routes for VideoGame model.
-    e) Tags Controller - Restful Routes for Tag model.
-    f) Reviews Controller - Restful Routes for Review model.
-  - Views
+
+  a) Controllers
+    *COMPLETE* - Welcome Controller - Controls Root route
+    *COMPLETE* - Sessions Controller - Controls Login/Logout routes
+    *COMPLETE* - Users Controller - Controls User Account Creation/Management/Deletion routes
+    *COMPLETE* - VideoGames Controller - Restful Routes for VideoGame model.
+    *COMPLETE* - Tags Controller - Restful Routes for Tag model.
+    *COMPLETE* - Reviews Controller - Restful Routes for Review model.
+
+  b) Views
+    *COMPLETE* - Welcome/home.html.erb - root page of site.
+    *COMPLETE* - Sessions/new.html.erb - Login Form
+    *COMPLETE* - Users/new.html.erb - User Registration/Update Form
+    *COMPLETE* - Users/show.html.erb - User Account Information Page
+    *COMPLETE* - VideoGames/index.html.erb - VideoGames Index Page
+    *COMPLETE* - VideoGames/new.html.erb - New/Update VideoGame Form
+    *COMPLETE* - VideoGames/show.html.erb - VideoGame Information Page
+    *COMPLETE* - Reviews/new.html.erb - New/Update Review Form
+    *COMPLETE* - Reviews/show.html.erb - Review Information Page
+    *COMPLETE* - Tags/new.html.erb - New/Update Tag Form
+    *COMPLETE* - Tags/show.html.erb - Tag Information Page
