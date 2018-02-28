@@ -41,45 +41,45 @@ Video Game Community Hub
     *COMPLETE* - Reviews/new.html.erb - New/Update Review Form
     *COMPLETE* - Reviews/show.html.erb - Review Information Page
 
-  3. Continue building Rails Framework for Users, Video Games, Tags, and Reviews.
+3. Continue building Rails Framework for Users, Video Games, Tags, and Reviews.
 
-    a) Controller Actions and Routes
-      *COMPLETE* - Welcome#home
-      *COMPLETE* - Sessions#new
-      *COMPLETE* - Sessions#create
-      *COMPLETE* - Sessions#destroy
-      *COMPLETE* - Users#new
-      *COMPLETE* - Users#create
-      *COMPLETE* - Users#show
-      *COMPLETE* - Users#edit
-      *COMPLETE* - Users#update
-      *COMPLETE* - Users#destroy
-      *COMPLETE* - VideoGames#index
-      *COMPLETE* - VideoGames#new
-      *COMPLETE* - VideoGames#create
-      *COMPLETE* - VideoGames#show
-      *COMPLETE* - VideoGames#edit
-      *COMPLETE* - VideoGames#update
-      *COMPLETE* - VideoGames#destroy
-      *COMPLETE* - Tags#new
-      *COMPLETE* - Tags#create
-      *COMPLETE* - Tags#show
-      *COMPLETE* - Tags#edit
-      *COMPLETE* - Tags#update
-      *COMPLETE* - Tags#destroy
-      *COMPLETE* - Reviews#new
-      *COMPLETE* - Reviews#create
-      *COMPLETE* - Reviews#show
-      *COMPLETE* - Reviews#edit
-      *COMPLETE* - Reviews#update
-      *COMPLETE* - Reviews#destroy
+  a) Controller Actions and Routes
+    *COMPLETE* - Welcome#home
+    *COMPLETE* - Sessions#new
+    *COMPLETE* - Sessions#create
+    *COMPLETE* - Sessions#destroy
+    *COMPLETE* - Users#new
+    *COMPLETE* - Users#create
+    *COMPLETE* - Users#show
+    *COMPLETE* - Users#edit
+    *COMPLETE* - Users#update
+    *COMPLETE* - Users#destroy
+    *COMPLETE* - VideoGames#index
+    *COMPLETE* - VideoGames#new
+    *COMPLETE* - VideoGames#create
+    *COMPLETE* - VideoGames#show
+    *COMPLETE* - VideoGames#edit
+    *COMPLETE* - VideoGames#update
+    *COMPLETE* - VideoGames#destroy
+    *COMPLETE* - Tags#new
+    *COMPLETE* - Tags#create
+    *COMPLETE* - Tags#show
+    *COMPLETE* - Tags#edit
+    *COMPLETE* - Tags#update
+    *COMPLETE* - Tags#destroy
+    *COMPLETE* - Reviews#new
+    *COMPLETE* - Reviews#create
+    *COMPLETE* - Reviews#show
+    *COMPLETE* - Reviews#edit
+    *COMPLETE* - Reviews#update
+    *COMPLETE* - Reviews#destroy
 
-    4. Creating Web Content
+4. Creating Web Content
 
-      a) Stub View Data
-      *COMPLETE* - welcome/home.html.erb
-      *COMPLETE* - users/new.html.erb
-      *COMPLETE* - sessions/new.html.erb
-      - video_games/new.html.erb (also edit.html.erb)
-      - reviews/new.html.erb (also edit.html.erb)
-      - tags/new.html.erb (also edit.html.erb)
+  a) Stub View Data
+    *COMPLETE* - welcome/home.html.erb
+    *COMPLETE* - users/new.html.erb
+    *COMPLETE* - sessions/new.html.erb
+    - video_games/new.html.erb (also edit.html.erb)
+    - reviews/new.html.erb (also edit.html.erb)
+    - tags/new.html.erb (also edit.html.erb)
