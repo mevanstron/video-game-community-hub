@@ -78,8 +78,8 @@ Video Game Community Hub
 
       a) Stub View Data
       *COMPLETE* - welcome/home.html.erb
-      - users/new.html.erb (also edit.html.erb)
-      - sessions/new.html.erb
+      *COMPLETE* - users/new.html.erb
+      *COMPLETE* - sessions/new.html.erb
       - video_games/new.html.erb (also edit.html.erb)
       - reviews/new.html.erb (also edit.html.erb)
       - tags/new.html.erb (also edit.html.erb)
