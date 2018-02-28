@@ -54,7 +54,7 @@ Video Game Community Hub
       *COMPLETE* - Users#edit
       *COMPLETE* - Users#update
       *COMPLETE* - Users#destroy
-      *COMPLETE* - VideoGames#index      
+      *COMPLETE* - VideoGames#index
       *COMPLETE* - VideoGames#new
       *COMPLETE* - VideoGames#create
       *COMPLETE* - VideoGames#show
@@ -73,3 +73,8 @@ Video Game Community Hub
       *COMPLETE* - Reviews#edit
       *COMPLETE* - Reviews#update
       *COMPLETE* - Reviews#destroy
+
+    4. Creating Web Content
+
+      a) Stub View Data
+      *COMPLETE* - welcome/home.html.erb
