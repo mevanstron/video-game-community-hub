@@ -7,13 +7,13 @@ Video Game Community Hub
     b) Video Game: Title, Year Released, Genre, Console, User ID
     c) Tags: Title, Video Game ID
     d) Review: Title, Rating, Content, User ID, Video Game ID
-    
+
   - Models
     a) User has many Video Games
-    b) User has many Reviews, through Video Games
+    b) User has many Reviews
     c) Video Game belongs to User
     d) Video Game has many Tags
-    e) Video Game has many Reviews, through Users
+    e) Video Game has many Users, through Reviews
     f) Tag belongs to Video Game
     g) Review belongs to User
     h) Review belongs to Video Game
