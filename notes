@@ -20,4 +20,10 @@ Video Game Community Hub
 
 2. Continue building Rails Framework for Users, Video Games, Tags, and Reviews.
   - Controllers
+    a) Welcome Controller - Controls Root route
+    b) Sessions Controller - Controls Login/Logout routes
+    c) Users Controller - Controls User Account Creation/Management/Deletion routes
+    d) VideoGames Controller - Restful Routes for VideoGame model.
+    e) Tags Controller - Restful Routes for Tag model.
+    f) Reviews Controller - Restful Routes for Review model.
   - Views
