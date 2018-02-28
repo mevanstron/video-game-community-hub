@@ -1,6 +1,13 @@
 Video Game Community Hub
 
 1. Rails Framework for Users, Video Games, Tags, and Reviews.
+
+  - Migrations
+    a) User Table: Email, Password, Nickname
+    b) Video Game: Title, Year Released, Genre, Console, User ID
+    c) Tags: Title, Video Game ID
+    d) Review: Title, Rating, Content, User ID, Video Game ID
+    
   - Models
     a) User has many Video Games
     b) User has many Reviews, through Video Games
@@ -11,12 +18,6 @@ Video Game Community Hub
     g) Review belongs to User
     h) Review belongs to Video Game
 
-  - Migrations
-    a) User Table: Email, Password, Nickname
-    b) Video Game: Title, Year Released, Genre, Console, User ID
-    c) Tags: Title, Video Game ID
-    d) Review: Title, Rating, Content, User ID, Video Game ID
-    
 2. Continue building Rails Framework for Users, Video Games, Tags, and Reviews.
   - Controllers
   - Views
