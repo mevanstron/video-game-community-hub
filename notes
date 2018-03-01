@@ -97,8 +97,8 @@ Video Game Community Hub
     *COMPLETE* - destroy
 
   b) Users
-    - new
-    - create
+    *COMPLETE* - new
+    *COMPLETE* - create
     - show
     - edit
     - update
@@ -111,3 +111,4 @@ Video Game Community Hub
 
   b) test MVC functions
     *COMPLETE* - Sessions Controller allows sign in / sign out from appropriate views.
+    - Users Model has validations that prevent creation of an invalid user (i.e. duplicate / missing email, missing password)
