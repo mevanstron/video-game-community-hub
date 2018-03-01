@@ -1,5 +1,23 @@
 <h1>Registration</h1>
-<p>Email: text_field</p>
-<p>Password: text_field</p>
-<p>Confirm Password: text_field</p>
-<p>Submit button | Cancel link</p>
+
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :email, "Email" %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :nickname, "Nickname" %>
+    <%= f.text_field :nickname %>
+  </div>
+  <div>
+    <%= f.label :password, "Password" %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirm, "Confirm Password" %>
+    <%= f.password_field :password_confirm %>
+  </div>
+  <div>
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
