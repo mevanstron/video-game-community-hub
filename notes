@@ -93,5 +93,8 @@ Video Game Community Hub
 
   a) Sessions
     *COMPLETE* - new (Needs nothing)
-    - create
-    - destroy
+    *COMPLETE* - create
+    *COMPLETE* - destroy
+
+  b) Replace Stubbed View Content
+    *COMPLETE* - sessions/new.html.erb

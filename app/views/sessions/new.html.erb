@@ -1,4 +1,13 @@
 <h1>Sign in</h1>
-<p>Email: text_field</p>
-<p>Password: text_field</p>
-<p>Sign in button | Cancel link</p>
+
+<%= form_tag sessions_path do %>
+  <div>
+    <%= label_tag :email, "Email" %>
+    <%= text_field_tag :email %>
+  </div>
+  <div>
+    <%= label_tag :password, "Password" %>
+    <%= text_field_tag :password %>
+  </div>
+    <%= submit_tag "Sign in" %> <%= link_to "Cancel", root_path %>
+<% end %>
