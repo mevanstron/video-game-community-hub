@@ -98,3 +98,6 @@ Video Game Community Hub
 
   b) Replace Stubbed View Content
     *COMPLETE* - sessions/new.html.erb
+
+  c) test MVC functions
+    *COMPLETE* - Sessions Controller allows sign in / sign out from appropriate views.

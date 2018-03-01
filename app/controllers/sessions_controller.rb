@@ -15,7 +15,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :user_id
-    #raise session[:user_id].inspect
     redirect_to root_path
   end
 end
