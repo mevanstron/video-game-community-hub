@@ -108,7 +108,8 @@ Video Game Community Hub
 
   a) Replace Stubbed View Content
     *COMPLETE* - sessions/new.html.erb
+    *COMPLETE* - users/new.html.erb
 
   b) test MVC functions
     *COMPLETE* - Sessions Controller allows sign in / sign out from appropriate views.
-    - Users Model has validations that prevent creation of an invalid user (i.e. duplicate / missing email, missing password)
+    *COMPLETE* - Users Model has validations that prevent creation of an invalid user.
