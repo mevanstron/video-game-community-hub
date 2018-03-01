@@ -1,5 +1,11 @@
 <h1>Registration</h1>
-
+<% if !@user.errors.empty? %>
+  <% @user.errors.full_messages.each do |message| %>
+    <ul>
+      <li><%= message %></li>
+    </ul>
+  <% end %>
+<% end %>
 <%= form_for @user do |f| %>
   <div>
     <%= f.label :email, "Email" %>
