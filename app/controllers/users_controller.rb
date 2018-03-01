@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
+
   def new
     @user = User.new
   end
@@ -15,16 +16,23 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user.update(email: params[:user][:email], nickname: params[:user][:nickname])
+
+    if @user.valid?
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+  end
+
   def show
   end
 
   def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 
   private
