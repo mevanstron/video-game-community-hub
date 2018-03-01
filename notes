@@ -88,3 +88,10 @@ Video Game Community Hub
     *COMPLETE* - tags/show.html
     *COMPLETE* - reviews/show.html
     *COMPLETE* - users/show.html
+
+5. Build Controller Functions.
+
+  a) Sessions
+    *COMPLETE* - new (Needs nothing)
+    - create
+    - destroy
