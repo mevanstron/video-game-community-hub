@@ -4,8 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:email])
-    #return head(:forbidden) unless @user.authenticate(params[:password])
-    if @user.authenticate(params[:password])
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
@@ -16,5 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :user_id
+    #raise session[:user_id].inspect
+    redirect_to root_path
   end
 end
