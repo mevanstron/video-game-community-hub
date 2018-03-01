@@ -1,7 +1,9 @@
 <h1>Account Information</h1>
-<p>Nickname: Nickname</p>
-<p>Email: Email</p>
-<p>Edit button | Delete button</p>
+
+<h3><%= @user.nickname %></h3>
+<p>Email: <%= @user.email %></p>
+<%= button_to "Edit", @user %> <%= button_to "Delete", @user, method: :delete %>
+
 <p>Collection of Video Games:</p>
 <ul>
   <li>Link to Video Game | Link to Review (if present)</li>
