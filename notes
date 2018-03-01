@@ -80,9 +80,11 @@ Video Game Community Hub
     *COMPLETE* - welcome/home.html.erb
     *COMPLETE* - users/new.html.erb
     *COMPLETE* - sessions/new.html.erb
+    *COMPLETE* - video_games/index.html.erb
     *COMPLETE* - video_games/new.html.erb (also edit.html.erb)
     *COMPLETE* - tags/new.html.erb (also edit.html.erb)
     *COMPLETE* - reviews/new.html.erb (also edit.html.erb)
     *COMPLETE* - video_games/show.html
     *COMPLETE* - tags/show.html
-    - reviews/show.html
+    *COMPLETE* - reviews/show.html
+    *COMPLETE* - users/show.html
