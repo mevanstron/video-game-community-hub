@@ -113,3 +113,4 @@ Video Game Community Hub
   b) test MVC functions
     *COMPLETE* - Sessions Controller allows sign in / sign out from appropriate views.
     *COMPLETE* - Users Model has validations that prevent creation of an invalid user.
+    *COMPLETE* - Add link to sign up / sign in at application.html.erb, if not signed in.

@@ -9,7 +9,11 @@
   </head>
 
   <body>
-    <div>navbar content <%= link_to "Sign out", session_path(session[:user_id]), method: :delete if session[:user_id] %></div>
+    <div>
+      <%= link_to "Sign up", new_user_path if !session[:user_id] %>
+      <%= link_to "Sign in", new_session_path if !session[:user_id] %>
+      <%= link_to "Sign out", session_path(session[:user_id]), method: :delete if session[:user_id] %>
+    </div>
     <%= flash[:alert] if flash[:alert] %>
     <%= yield %>
   </body>
