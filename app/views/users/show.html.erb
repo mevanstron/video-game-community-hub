@@ -2,7 +2,7 @@
 
 <h3><%= @user.nickname %></h3>
 <p>Email: <%= @user.email %></p>
-<%= link_to "Edit", edit_user_path(@user) %> <%= button_to "Delete", @user, method: :delete %>
+<%= link_to "Edit", edit_user_path(@user) %> <%= button_to("Delete", @user, method: :delete) if "HIDE UNTIL FUTURE RELEASE" == true %>
 
 <p>Collection of Video Games:</p>
 <ul>
