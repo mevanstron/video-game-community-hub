@@ -2,7 +2,7 @@
 
 <h3><%= @user.nickname %></h3>
 <p>Email: <%= @user.email %></p>
-<%= button_to "Edit", @user %> <%= button_to "Delete", @user, method: :delete %>
+<%= link_to "Edit", edit_user_path(@user) %> <%= button_to "Delete", @user, method: :delete %>
 
 <p>Collection of Video Games:</p>
 <ul>

@@ -99,7 +99,7 @@ Video Game Community Hub
   b) Users
     *COMPLETE* - new
     *COMPLETE* - create
-    - show
+    *COMPLETE* - show
     - edit
     - update
     - destroy
@@ -109,6 +109,7 @@ Video Game Community Hub
   a) Replace Stubbed View Content
     *COMPLETE* - sessions/new.html.erb
     *COMPLETE* - users/new.html.erb
+    *COMPLETE* - users/show.html.erb
 
   b) test MVC functions
     *COMPLETE* - Sessions Controller allows sign in / sign out from appropriate views.
