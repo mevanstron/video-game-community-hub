@@ -114,7 +114,7 @@ Video Game Community Hub
     *COMPLETE* - users/show.html.erb
     *COMPLETE* - users/edit.html.erb (created instead of replacing stub)
     *COMPLETE* - video_games/index.html.erb
-    - video_games/new.html.erb
+    *COMPLETE* - video_games/new.html.erb
     - video_games/edit.html.erb
     - video_games/show.html.erb
 

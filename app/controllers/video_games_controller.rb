@@ -8,6 +8,7 @@ class VideoGamesController < ApplicationController
   end
 
   def create
+    #raise params.inspect
   end
 
   def show
@@ -20,5 +21,11 @@ class VideoGamesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def video_game_params
+    params.require(:video_game).permit(:title, :release_year
   end
 end
