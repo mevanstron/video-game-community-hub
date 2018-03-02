@@ -4,7 +4,14 @@
 <p>Email: <%= @user.email %></p>
 <%= link_to "Edit", edit_user_path(@user) %> <%= button_to("Delete", @user, method: :delete) if "HIDE UNTIL FUTURE RELEASE" == true %>
 
-<p>Collection of UserVideoGames:</p>
-<ul>
-  <li>Link to Video Game | Link to Review (if present)</li>
-</ul>
+<p>Your Video Game Collection</p>
+
+<table>
+  <% @user.video_games.each do |video_game| %>
+  <tr>
+    <td><%= link_to video_game.title, video_game %></td>
+    <td>Write a Review!</td>
+    <td><%= button_to "Remove Game", user_video_game_path(video_game), method: :delete %> </td>
+  </tr>
+  <% end %>
+</table>

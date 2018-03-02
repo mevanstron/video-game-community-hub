@@ -5,7 +5,7 @@
   <% @video_games.each do |video_game| %>
   <tr>
     <td><%= link_to video_game.title, video_game %></td>
-    <td><%= link_to "Add to Collection", user_video_games_path(video_game_id: video_game), method: "post" %></td>
+    <td><%= button_to "Add to Collection", user_video_games_path(video_game_id: video_game), method: "post" %></td>
   </tr>
   <% end %>
 </table>
