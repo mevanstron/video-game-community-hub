@@ -1,3 +1,5 @@
-<ul>
-  <li><%= error_message %></li>
-</ul>
+<% if !error_message.nil? %>
+  <ul>
+    <li><%= error_message%></li>
+  </ul>
+<% end %>
