@@ -1,0 +1,20 @@
+<%= form_for video_game do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title%>
+  </div>
+  <div>
+    <%= f.label :release_year, "Year Released" %>
+    <%= f.text_field :release_year%>
+  </div>
+  <div>
+    <%= f.label :console %>
+    <%= f.text_field :console%>
+  </div>
+
+<p>Tags: collection_field</p>
+<p>New Tag: partial_to tags/new.html.erb</p>
+  <div>
+    <%= f.submit :submit %> <%= link_to "Cancel", :back %>
+  </div>
+<% end %>
