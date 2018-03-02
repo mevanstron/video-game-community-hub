@@ -1,0 +1,2 @@
+module UserVideoGamesHelper
+end

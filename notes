@@ -104,6 +104,8 @@ Video Game Community Hub
     *COMPLETE* - update
     - destroy
 
+    c) VideoGame
+
 6. Test Controller / View functionality
 
   a) Replace Stubbed View Content
@@ -117,3 +119,13 @@ Video Game Community Hub
     *COMPLETE* - Users Model has validations that prevent creation of an invalid user.
     *COMPLETE* - Add link to sign up / sign in at application.html.erb, if not signed in.
     *COMPLETE* - Users can edit their email and nickname through edit form.
+
+7. Add UserVideoGames object to manage relationship between users and video games.
+
+    - Create Object with user_id and video_game_id
+    - UserVideoGames belongs_to User
+    - UserVideoGames belongs_to VideoGame
+    - User has many UserVideoGames
+    - User has many VideoGames, through UserVideoGames
+    - VideoGame has many UserVideoGames
+    - VideoGame has many VideoGames, through UserVideoGames
