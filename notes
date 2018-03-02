@@ -123,6 +123,7 @@ Video Game Community Hub
     *COMPLETE* - Users Model has validations that prevent creation of an invalid user.
     *COMPLETE* - Add link to sign up / sign in at application.html.erb, if not signed in.
     *COMPLETE* - Users can edit their email and nickname through edit form.
+    *COMPLETE* - Users can create new video games that persist in the database through create action.
 
 7. Add UserVideoGames object to manage relationship between users and video games.
 

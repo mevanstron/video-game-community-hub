@@ -9,6 +9,14 @@ class VideoGamesController < ApplicationController
 
   def create
     #raise params.inspect
+
+    @video_game = VideoGame.create(video_game_params)
+
+    if @video_game.valid?
+      redirect_to video_game_path(@video_game)
+    else
+      render :new
+    end
   end
 
   def show
@@ -26,6 +34,6 @@ class VideoGamesController < ApplicationController
   private
 
   def video_game_params
-    params.require(:video_game).permit(:title, :release_year
+    params.require(:video_game).permit(:title, :release_year, :console)
   end
 end
