@@ -1,4 +1,5 @@
 class VideoGamesController < ApplicationController
+  before_action :set_video_game, only: [:show, :edit, :update]
   def index
     @video_games = VideoGame.all
   end
@@ -8,8 +9,6 @@ class VideoGamesController < ApplicationController
   end
 
   def create
-    #raise params.inspect
-
     @video_game = VideoGame.create(video_game_params)
 
     if @video_game.valid?
@@ -35,5 +34,9 @@ class VideoGamesController < ApplicationController
 
   def video_game_params
     params.require(:video_game).permit(:title, :release_year, :console)
+  end
+
+  def set_video_game
+    @video_game = VideoGame.find_by(id: params[:id])
   end
 end

@@ -122,8 +122,9 @@ Video Game Community Hub
     *COMPLETE* - users/edit.html.erb (created instead of replacing stub)
     *COMPLETE* - video_games/index.html.erb
     *COMPLETE* - video_games/new.html.erb
+    *COMPLETE* - video_games/show.html.erb
     - video_games/edit.html.erb
-    - video_games/show.html.erb
+
 
   b) test MVC functions
     *COMPLETE* - Sessions Controller allows sign in / sign out from appropriate views.

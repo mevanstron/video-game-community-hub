@@ -1,8 +1,8 @@
-<h1>Video Game Title</h1>
-<p>Console</p>
-<p>Release Year</p>
+<h1><%= @video_game.title %></h1>
+<p><%= @video_game.console %></p>
+<p><%= @video_game.release_year %></p>
 <p>Tags | partial_to tags/show.html.erb</p>
-<p>Edit button | Delete button</p>
+<p><%= link_to "Edit", edit_video_game_path(@video_game) %> | Delete button</p>
 <p></p>
 <div>partial_to reviews/new.html.erb</div>
 <p>or</p>
