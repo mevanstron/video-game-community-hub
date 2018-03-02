@@ -105,12 +105,12 @@ Video Game Community Hub
     - destroy
 
     c) VideoGame
-    *COMPLETE* - index
-    *COMPLETE* - new
-    *COMPLETE* - create
-     - show
-     - edit
-     - update
+     *COMPLETE* - index
+     *COMPLETE* - new
+     *COMPLETE* - create
+     *COMPLETE* - show
+     *COMPLETE* - edit
+     *COMPLETE* - update
      - destroy
 
 6. Test Controller / View functionality
@@ -143,3 +143,8 @@ Video Game Community Hub
     *COMPLETE* - User has many VideoGames, through UserVideoGames
     *COMPLETE* - VideoGame has many UserVideoGames
     *COMPLETE* - VideoGame has many VideoGames, through UserVideoGames
+
+    8. UserVideoGame Controller Actions paired with Views
+
+      - New UserVideoGame with New / Create Actions, adds a game to a user's video_games collection
+      - Destroy removes a game from a user's collection.
