@@ -4,6 +4,7 @@ class VideoGamesController < ApplicationController
   end
 
   def new
+    @video_game = VideoGame.new
   end
 
   def create

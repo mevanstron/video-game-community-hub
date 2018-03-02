@@ -1,4 +1,5 @@
 <h1>Video Games</h1>
+  <p><%= link_to "Add New Video Game", new_video_game_path %></p>
 <ul>
   <% @video_games.each do |video_game| %>
     <li><%= link_to video_game.title, video_game %> | Button: Add to collection. Render Partial to new UserVideoGame form.</li>
