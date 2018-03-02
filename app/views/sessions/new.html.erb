@@ -1,5 +1,5 @@
 <h1>Sign in</h1>
-<%= render(partial: 'layouts/error_message', locals: {error_message: @error_message}) %>
+<%= render 'layouts/error_message', error_message: @error_message %>
 <%= form_tag sessions_path do %>
   <div>
     <%= label_tag :email, "Email" %>
