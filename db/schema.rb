@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180302153742) do
 
   create_table "user_video_games", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "video_game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
