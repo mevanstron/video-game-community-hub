@@ -1,2 +1,6 @@
 <h1>Video Games</h1>
-<p>List of all Video Games with hyperlinks to show page</p>
+<ul>
+  <% @video_games.each do |video_game| %>
+    <li><%= link_to video_game.title, video_game %> | Button: Add to collection. Render Partial to new UserVideoGame form.</li>
+  <% end %>
+</ul>
