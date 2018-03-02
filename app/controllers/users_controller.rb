@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user.update(email: params[:user][:email], nickname: params[:user][:nickname])
+    @user.update(user_params)
 
     if @user.valid?
       redirect_to @user

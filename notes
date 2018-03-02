@@ -123,7 +123,7 @@ Video Game Community Hub
     *COMPLETE* - video_games/index.html.erb
     *COMPLETE* - video_games/new.html.erb
     *COMPLETE* - video_games/show.html.erb
-    - video_games/edit.html.erb
+    *COMPLETE* - video_games/edit.html.erb
 
 
   b) test MVC functions
@@ -132,6 +132,7 @@ Video Game Community Hub
     *COMPLETE* - Add link to sign up / sign in at application.html.erb, if not signed in.
     *COMPLETE* - Users can edit their email and nickname through edit form.
     *COMPLETE* - Users can create new video games that persist in the database through create action.
+    *COMPLETE* - Confirmed functionality of video_game update action.
 
 7. Add UserVideoGames object to manage relationship between users and video games.
 
