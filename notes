@@ -146,5 +146,5 @@ Video Game Community Hub
 
     8. UserVideoGame Controller Actions paired with Views
 
-      - New UserVideoGame with New / Create Actions, adds a game to a user's video_games collection
-      - Destroy removes a game from a user's collection.
+      *COMPLETE* - New UserVideoGame with New / Create Actions, adds a game to a user's video_games collection
+      *COMPLETE* - Destroy removes a game from a user's collection.
