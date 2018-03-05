@@ -144,7 +144,16 @@ Video Game Community Hub
     *COMPLETE* - VideoGame has many UserVideoGames
     *COMPLETE* - VideoGame has many VideoGames, through UserVideoGames
 
-    8. UserVideoGame Controller Actions paired with Views
+8. UserVideoGame Controller Actions paired with Views
 
-      *COMPLETE* - New UserVideoGame with New / Create Actions, adds a game to a user's video_games collection
-      *COMPLETE* - Destroy removes a game from a user's collection.
+  *COMPLETE* - New UserVideoGame with New / Create Actions, adds a game to a user's video_games collection
+  *COMPLETE* - Destroy removes a game from a user's collection.
+
+9. Build Tags Functionality
+
+  - create tags index.  shows list of tags with edit and delete options.
+
+11. Add Tags routes as nested resource to VideoGames.
+
+  *COMPLETE* - Add tags as nested route under VideoGames.
+  -

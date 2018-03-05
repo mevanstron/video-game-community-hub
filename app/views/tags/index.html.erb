@@ -1,0 +1,5 @@
+<ul>
+  <% @tags.each do |tag| %>
+    <li><%= tag.name %> | <%= link_to "Edit", edit_tag_path(tag) %> | <%= button_to "Delete", tag_path(tag), method: "delete" %></li>
+  <% end %>
+</ul>
