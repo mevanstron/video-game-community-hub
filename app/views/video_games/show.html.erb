@@ -10,6 +10,8 @@
 </ul>
 
 <p><%= link_to "Edit", edit_video_game_path(@video_game) %> | Delete button</p>
-<div>partial_to reviews/new.html.erb</div>
-<p>or</p>
-<p>partial_to user's existing game review at reviews/show.html.erb</p>
+<p>
+  <%= link_to "Write a Review!", new_video_game_review_path(@video_game) %>
+   or
+  <%= link_to "View all", video_game_reviews_path(@video_game) %>
+</p>

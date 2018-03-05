@@ -1,6 +1,9 @@
-<h1><h3>Review for [game]</h3></h1>
-
+<h1><h3>Review for <%= @review.video_game.title %></h3></h1>
+<%= render partial: 'layouts/error_message', collection: @review.errors.full_messages %>
 <%= form_for @review do |f| %>
+  <div>
+    <%= f.hidden_field :video_game_id unless @review.video_game.nil? %>
+  </div>
   <div>
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -12,6 +15,9 @@
   <div>
     <%= f.label :content %>
     <%= f.text_area :content, cols: 80, rows: 20 %>
+  </div>
+  <div>
+    <%= f.submit :submit %>
   </div>
 <% end %>
 

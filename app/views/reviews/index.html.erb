@@ -1,0 +1,8 @@
+<h1>Reviews for <%= @video_game.title if @video_game %></h1>
+<table>
+  <% @reviews.each do |review| %>
+    <tr>
+      <td><%= link_to review.title, video_game_review_path(review.video_game_id, review) %></td>
+    </tr>
+  <% end %>
+</table>
