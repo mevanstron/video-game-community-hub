@@ -1,3 +1,4 @@
 class Tag < ApplicationRecord
-  belongs_to :video_game
+  has_many :video_game_tags
+  has_many :video_games, through: :video_game_tags
 end
