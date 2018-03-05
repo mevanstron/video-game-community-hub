@@ -10,4 +10,11 @@ class VideoGame < ApplicationRecord
   validates :title, uniqueness: true
 
   accepts_nested_attributes_for :tags
+
+  def tags_attributes=(tags_attributes)
+    tags_attributes.values.each do |tag_attribute|
+      tag = Tag.find_or_create_by(tag_attribute)
+      self.tags << tag unless self.tags.include?(tag) || tag.name == ""
+    end
+  end
 end

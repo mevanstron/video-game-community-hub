@@ -10,7 +10,6 @@ class VideoGamesController < ApplicationController
   end
 
   def create
-    raise params.inspect
     @video_game = VideoGame.create(video_game_params)
 
     if @video_game.valid?
