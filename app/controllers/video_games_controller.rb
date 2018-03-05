@@ -6,6 +6,7 @@ class VideoGamesController < ApplicationController
 
   def new
     @video_game = VideoGame.new
+    @tags = Tag.all
   end
 
   def create
@@ -22,6 +23,7 @@ class VideoGamesController < ApplicationController
   end
 
   def edit
+    @tags = Tag.all
   end
 
   def update
@@ -40,7 +42,7 @@ class VideoGamesController < ApplicationController
   private
 
   def video_game_params
-    params.require(:video_game).permit(:title, :release_year, :console)
+    params.require(:video_game).permit(:title, :release_year, :console, tag_ids:[])
   end
 
   def set_video_game

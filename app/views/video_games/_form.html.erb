@@ -11,6 +11,10 @@
     <%= f.label :console %>
     <%= f.text_field :console%>
   </div>
+  <div>
+    <%= f.label :tags %>
+    <%= f.collection_check_boxes :tag_ids, tags, :id, :name %>
+  </div>
 
 <p>Tags: collection_field</p>
 <p>New Tag: partial_to tags/new.html.erb</p>

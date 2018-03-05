@@ -2,4 +2,4 @@
 
 <%= render partial: 'layouts/error_message', collection: @video_game.errors.full_messages  %>
 
-<%= render partial: 'form', locals: {video_game: @video_game} %>
+<%= render partial: 'form', locals: {video_game: @video_game, tags: @tags} %>
