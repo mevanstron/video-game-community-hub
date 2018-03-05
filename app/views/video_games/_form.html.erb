@@ -15,8 +15,14 @@
     <%= f.label :tags %>
     <%= f.collection_check_boxes :tag_ids, tags, :id, :name %>
   </div>
+  <p>New Tag:</p>
+  <%= f.fields_for :tags, video_game.tags.build do |tags_fields| %>
+    <div>
+      <%= tags_fields.label :name %>
+      <%= tags_fields.text_field :name %>
+    </div>
+  <% end %>
 
-<p>Tags: collection_field</p>
 <p>New Tag: partial_to tags/new.html.erb</p>
   <div>
     <%= f.submit "Submit" %> <%= link_to "Cancel", :back %>

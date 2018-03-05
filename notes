@@ -154,3 +154,4 @@ Video Game Community Hub
   *COMPLETE* - create tags index.  shows list of tags with edit and delete options.
   *COMPLETE* - Display collection of associated tags on VideoGames Show page.
   *COMPLETE* - Add ability to associate tags to video_games.
+  - Build new tag form that can be used from the tags index or the video game new/edit form.

@@ -8,4 +8,6 @@ class VideoGame < ApplicationRecord
 
   validates :title, presence: true
   validates :title, uniqueness: true
+
+  accepts_nested_attributes_for :tags
 end

@@ -10,6 +10,7 @@ class VideoGamesController < ApplicationController
   end
 
   def create
+    raise params.inspect
     @video_game = VideoGame.create(video_game_params)
 
     if @video_game.valid?
@@ -42,7 +43,7 @@ class VideoGamesController < ApplicationController
   private
 
   def video_game_params
-    params.require(:video_game).permit(:title, :release_year, :console, tag_ids:[])
+    params.require(:video_game).permit(:title, :release_year, :console, tag_ids:[], tags_attributes:[:name])
   end
 
   def set_video_game
