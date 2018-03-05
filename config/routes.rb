@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
   resources :video_games do
-    resources :tags
+    resources :reviews
   end
   resources :user_video_games, only: [:create, :destroy]
   resources :tags

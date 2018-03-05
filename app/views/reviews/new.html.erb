@@ -1,3 +1,21 @@
-<h1><h3>Write a Review</h3></h1>
+<h1><h3>Review for [game]</h3></h1>
+
+<%= form_for @review do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :rating %>
+    <%= f.select(:rating, [1,2,3,4,5], {include_blank: "- Select -"}) %>
+  </div>
+  <div>
+    <%= f.label :content %>
+    <%= f.text_area :content, cols: 80, rows: 20 %>
+  </div>
+<% end %>
+
 <p>Title: text_field</p>
+<p>Rating: Select Field</p>
+<p>Content: Text area</p>
 <p>Submit button | Cancel link</p>

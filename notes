@@ -136,13 +136,13 @@ Video Game Community Hub
 
 7. Add UserVideoGames object to manage relationship between users and video games.
 
-    *COMPLETE* - Create Object with user_id and video_game_id
-    *COMPLETE* - UserVideoGames belongs_to User
-    *COMPLETE* - UserVideoGames belongs_to VideoGame
-    *COMPLETE* - User has many UserVideoGames
-    *COMPLETE* - User has many VideoGames, through UserVideoGames
-    *COMPLETE* - VideoGame has many UserVideoGames
-    *COMPLETE* - VideoGame has many VideoGames, through UserVideoGames
+  *COMPLETE* - Create Object with user_id and video_game_id
+  *COMPLETE* - UserVideoGames belongs_to User
+  *COMPLETE* - UserVideoGames belongs_to VideoGame
+  *COMPLETE* - User has many UserVideoGames
+  *COMPLETE* - User has many VideoGames, through UserVideoGames
+  *COMPLETE* - VideoGame has many UserVideoGames
+  *COMPLETE* - VideoGame has many VideoGames, through UserVideoGames
 
 8. UserVideoGame Controller Actions paired with Views
 
@@ -155,7 +155,11 @@ Video Game Community Hub
   *COMPLETE* - Display collection of associated tags on VideoGames Show page.
   *COMPLETE* - Add ability to associate tags to video_games.
   *COMPLETE* - Build new tag form that can be used from the video game new/edit form.
-  *COMPLETE*  - Add tag index to navbar'
-  - Build Add Tag to tags index.
-  - Build delete tag function.
-  - Remove Edit feature from tags/index.
+  *COMPLETE* - Add tag index to navbar'
+  *COMPLETE* - Build Add Tag to tags index.
+  *COMPLETE* - Build delete tag function.
+  *COMPLETE* - Remove Edit feature from tags/index.
+
+  10. Build Review Functionality
+
+    - Create New Review Form

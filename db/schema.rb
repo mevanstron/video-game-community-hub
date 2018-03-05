@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 20180305154339) do
 
   create_table "reviews", force: :cascade do |t|
-    t.string "Title"
-    t.integer "Rating"
-    t.text "Content"
+    t.string "title"
+    t.integer "rating"
+    t.text "content"
     t.integer "user_id"
     t.integer "video_game_id"
     t.datetime "created_at", null: false
