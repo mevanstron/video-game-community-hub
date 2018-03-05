@@ -1,9 +1,30 @@
 <h1>Tags</h1>
+<%= render partial: 'layouts/error_message', collection: @tag.errors.full_messages %>
+<p></p>
+
+  <div>
+
+
+  </div>
+  <div>
+
+  </div>
+
+
+<table>
+  <tr>
+    <%= form_for @tag do |f| %>
+      <td><%= f.label :name %></td>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.submit %></td>
+    <% end %>
+  </tr>
+</table>
+<br></br>
 <table>
   <% @tags.each do |tag| %>
     <tr>
       <td><%= tag.name %></td>
-      <td><%= link_to "Edit", edit_tag_path(tag) %></td>
       <td><%= button_to "Delete", tag_path(tag), method: "delete" %></td>
     </tr>
   <% end %>
