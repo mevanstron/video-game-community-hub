@@ -1,5 +1,10 @@
-<ul>
+<h1>Tags</h1>
+<table>
   <% @tags.each do |tag| %>
-    <li><%= tag.name %> | <%= link_to "Edit", edit_tag_path(tag) %> | <%= button_to "Delete", tag_path(tag), method: "delete" %></li>
+    <tr>
+      <td><%= tag.name %></td>
+      <td><%= link_to "Edit", edit_tag_path(tag) %></td>
+      <td><%= button_to "Delete", tag_path(tag), method: "delete" %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
