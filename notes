@@ -152,9 +152,5 @@ Video Game Community Hub
 9. Build Tags Functionality
 
   *COMPLETE* - create tags index.  shows list of tags with edit and delete options.
-  - Display collection of associated tags on VideoGames Show page.
-
-11. Add Tags routes as nested resource to VideoGames.
-
-  *COMPLETE* - Add tags as nested route under VideoGames.
-  -
+  *COMPLETE* - Display collection of associated tags on VideoGames Show page.
+  *COMPLETE* - Add ability to associate tags to video_games.
