@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show]
+  before_action :set_review, only: [:show, :edit, :update, :destroy]
   def index
     if params[:video_game_id]
       @reviews = VideoGame.find(params[:video_game_id]).reviews
@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
       @reviews = Review.all
     end
   end
+
   def new
     if params[:video_game_id]
       @review = VideoGame.find(params[:video_game_id]).reviews.build
@@ -35,6 +36,13 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @review.update(review_params)
+
+    if @review.valid?
+      redirect_to video_game_review_path(@review.video_game, @review)
+    else
+      render :edit
+    end
   end
 
   def destroy
