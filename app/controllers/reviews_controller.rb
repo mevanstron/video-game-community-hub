@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
   def index
     if params[:video_game_id]
       @reviews = VideoGame.find(params[:video_game_id]).reviews

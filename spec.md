@@ -12,7 +12,8 @@ Specs:
     *A User has many reviewed_games, through reviews.  A user submits a rating and content on a review.*
 - [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
     *models are required to have a present name and title, that are usually unique. Users must have password and email. Other examples can be seen on the models.*
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+- [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+    *VideoGame.most_reviewed queries the db and returns the video game that has the greatest number of reviews.*
 - [x] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
     *tag_attributes=(tag_attributes) method in VideoGame model.*
 - [x] Include signup (how e.g. Devise)

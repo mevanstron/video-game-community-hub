@@ -1,5 +1,7 @@
 class VideoGamesController < ApplicationController
   before_action :set_video_game, only: [:show, :edit, :update]
+  before_action :require_login
+
   def index
     @video_games = VideoGame.all
   end

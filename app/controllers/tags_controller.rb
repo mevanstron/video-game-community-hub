@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+  before_action :require_login
   def index
     @tags = Tag.all
     @tag = Tag.new
