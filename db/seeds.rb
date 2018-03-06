@@ -15,7 +15,9 @@ tag2 = Tag.create(name: "multi-player")
 tag3 = Tag.create(name: "co-op")
 tag4 = Tag.create(name: "PvP")
 
-ff7_review = Review.create(
+ssb_review_1 = Review.create( user_id: 1, video_game_id: 2, title: "Great Game", rating: 5, content: "I never get tired of this.")
+ff7_review_1 = Review.create( user_id: 2, video_game_id: 1, title: "My thoughts", rating: 3, content: "A nice game.")
+ff7_review_2 = Review.create(
                             user_id: 1,
                             video_game_id: 1,
                             title: "FF7 Review",

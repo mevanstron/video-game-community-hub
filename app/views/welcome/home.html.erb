@@ -1,4 +1,11 @@
 <h1>Video Game Community Hub</h1>
-
-<p>Sample video game title</p>
-<p>Sample review</p>
+<h3>Most Reviewed Game: </h3>
+<p><%= VideoGame.most_reviewed.title %></p>
+<h3>Reviews:</h3>
+<table>
+  <% VideoGame.most_reviewed.reviews.each do |review| %>
+    <tr>
+      <td><%= link_to review.title, video_game_review_path(review.video_game_id, review) %></td>
+    </tr>
+  <% end %>
+</table

@@ -17,4 +17,9 @@ class VideoGame < ApplicationRecord
       self.tags << tag unless self.tags.include?(tag) || tag.name == ""
     end
   end
+
+
+  def self.most_reviewed
+    VideoGame.joins(:reviews).group(:id).order("COUNT(reviews.id) DESC").limit(1).first
+  end
 end
