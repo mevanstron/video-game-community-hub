@@ -14,7 +14,11 @@
   <% @user.video_games.each do |video_game| %>
   <tr>
     <td><%= link_to video_game.title, video_game %></td>
-    <td>Write a Review!</td>
+    <% if @user.reviews.find_by(video_game_id: video_game.id) %>
+      <td><%= link_to "Your Review", video_game_review_path(id: @user.reviews.find_by(video_game_id: video_game.id).id, video_game_id: video_game.id) %></td>  
+    <% else %>
+      <td><%= link_to "Write a Review!", new_video_game_review_path(video_game) %> </td>
+    <% end %>
     <td><%= button_to "Remove Game", user_video_game_path(video_game), method: :delete %> </td>
   </tr>
   <% end %>
