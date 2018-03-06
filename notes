@@ -170,7 +170,8 @@ Video Game Community Hub
   11. Build sql queries.
 
     a) Most Reviewed Game.
-      - This will select the game that has the largest count of reviews.
-      - In the event of a tie, the game with the most recently added, or updated review is selected.
+      *COMPLETE* - This will select the game that has the largest count of reviews.
 
-  12. Build omniauth log in option.
+  12. Prevent logged out users from editing or deleting other user data.
+
+  13. Build omniauth log in option.

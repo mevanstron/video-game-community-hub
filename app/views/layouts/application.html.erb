@@ -16,6 +16,7 @@
         <%= link_to "Tags", tags_path %>
         <%= link_to "Sign out", session_path(session[:user_id]), method: :delete %>
       <% else %>
+        <%= link_to "Home", root_path %>
         <%= link_to "Sign up", new_user_path if !session[:user_id] %>
         <%= link_to "Sign in", new_session_path if !session[:user_id] %>
       <% end %>
