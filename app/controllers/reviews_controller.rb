@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-
+  before_action :set_review, only: [:show]
   def index
     if params[:video_game_id]
       @reviews = VideoGame.find(params[:video_game_id]).reviews
@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
     @review.user_id = current_user.id
     @review.save
     if @review && @review.valid?
-      redirect_to video_game_path(@review.video_game)
+      redirect_to video_game_review_path(@review.video_game, @review)
     else
       render :new
     end
@@ -41,6 +41,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def set_review
+    @review = Review.find(params[:id])
+  end
 
   def review_params
     params.require(:review).permit(:title, :rating, :content, :video_game_id)
