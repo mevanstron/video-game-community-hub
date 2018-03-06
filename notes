@@ -164,5 +164,9 @@ Video Game Community Hub
 
     *COMPLETE* - Create New Review Form
     *COMPLETE* - code reviews/show.html.erb.
-    - update edit button functionality.
-    - update delete button functionality.
+    *COMPLETE* - update edit button functionality.
+    *COMPLETE* - update delete button functionality.
+
+  11. Build sql queries.
+
+  12. Build omniauth log in option.
