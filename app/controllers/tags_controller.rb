@@ -4,9 +4,6 @@ class TagsController < ApplicationController
     @tag = Tag.new
   end
 
-  def new
-  end
-
   def create
     @tags = Tag.all
     @tag = Tag.create(tag_params)
@@ -18,17 +15,9 @@ class TagsController < ApplicationController
     end
   end
 
-  def show
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
   def destroy
-    Tag.find(params[:id]).destroy
+    @tag = Tag.find(params[:id])
+    @tag.destroy
     redirect_to tags_path
   end
 

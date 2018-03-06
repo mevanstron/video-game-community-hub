@@ -46,6 +46,8 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    @review.destroy
+    redirect_to user_path(current_user)
   end
 
   private
