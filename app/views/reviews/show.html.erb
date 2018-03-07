@@ -2,7 +2,8 @@
 <h3>--<%= @review.video_game.title %>--</h3>
 <p>Rating: <%= @review.rating %>/5</p>
 <p><%= @review.content %></p>
-<% if current_user == @review.user_id %>
+
+<% if @review.user == current_user %>
 <table>
   <tr>
     <td><%= link_to "Edit", edit_video_game_review_path(@review.video_game) %></td>

@@ -1,8 +1,8 @@
-<h1><h3>Review for <%= @review.video_game.title %></h3></h1>
+<h1><h3>Review for <%= @video_game.title %></h3></h1>
 <%= render partial: 'layouts/error_message', collection: @review.errors.full_messages %>
 <%= form_for @review do |f| %>
   <div>
-    <%= f.hidden_field :video_game_id unless @review.video_game.nil? %>
+    <%= f.hidden_field :video_game_id %>
   </div>
   <div>
     <%= f.label :title %>

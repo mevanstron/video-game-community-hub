@@ -1,28 +1,21 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_video_game, only: [:index, :new]
   before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
+
   def index
-    if params[:video_game_id]
-      @reviews = VideoGame.find(params[:video_game_id]).reviews
-      @video_game = VideoGame.find(params[:video_game_id])
-    else
-      @reviews = Review.all
-    end
+    @reviews = @video_game.reviews
   end
 
   def new
-    if params[:video_game_id]
-      @review = VideoGame.find(params[:video_game_id]).reviews.build
-    else
-      @review = Review.new
-    end
+    @review = @video_game.reviews.build
   end
 
   def create
-
-    @review = Review.new(review_params)
-    @review.user_id = current_user.id
-    @review.save
+    @review = Review.new(review_params) do |r|
+      r.user_id = current_user.id
+      r.save
+    end
     if @review && @review.valid?
       redirect_to video_game_review_path(@review.video_game, @review)
     else
@@ -52,6 +45,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def set_video_game
+    @video_game = VideoGame.find(params[:video_game_id])
+  end
 
   def set_review
     @review = Review.find(params[:id])
