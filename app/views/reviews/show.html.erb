@@ -2,9 +2,11 @@
 <h3>--<%= @review.video_game.title %>--</h3>
 <p>Rating: <%= @review.rating %>/5</p>
 <p><%= @review.content %></p>
+<% if current_user == @review.user_id %>
 <table>
   <tr>
     <td><%= link_to "Edit", edit_video_game_review_path(@review.video_game) %></td>
     <td><%= button_to "Delete", video_game_review_path(@review.video_game), method: "delete" %></td>
   </tr>
 </table>
+<% end %>
