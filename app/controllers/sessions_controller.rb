@@ -1,25 +1,24 @@
 class SessionsController < ApplicationController
-  before_action :require_login, only: [:destroy]
 
   def new
   end
 
-  def create
-    if auth
-      @user = User.find_or_create_by(uid: auth['uid']) do |u|
-        u.name = auth['info']['name']
-        u.email = auth['info']['email']
-        u.image = auth['info']['image']
-        u.password = SecureRandom.urlsafe_base64
-      end
-      authenticated = true
-    else
-      @user = User.find_by(email: params[:email])
-      authenticated = @user.authenticate(params[:password])
+  def create_by_auth
+    @user = User.find_or_create_by(uid: auth['uid']) do |u|
+      u.name = auth['info']['name']
+      u.email = auth['info']['email']
+      u.image = auth['info']['image']
+      u.password = SecureRandom.urlsafe_base64
     end
+    login(@user)
+    redirect_to user_path(@user)
+  end
 
-    if @user && authenticated
-      session[:user_id] = @user.id
+  def create
+    @user = User.find_by(email: params[:email])
+
+    if @user && @user.authenticate(params[:password])
+      login(@user)
       redirect_to user_path(@user)
     else
       @error_message = "Email / Password combination is incorrect"
@@ -33,6 +32,10 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def login(user)
+    session[:user_id] = user.id
+  end
 
   def auth
     request.env['omniauth.auth']
