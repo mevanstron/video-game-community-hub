@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   resources :tags
   resources :reviews
 
-  get 'auth/facebook/callback' => 'session#create'
+  get 'auth/facebook/callback' => 'sessions#create'
 end

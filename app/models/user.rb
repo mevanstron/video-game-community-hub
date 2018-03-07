@@ -16,6 +16,6 @@ class User < ApplicationRecord
   protected
 
   def password_required?
-    !persisted? || !password.nil? || !password_confirmation.nil?
+    !persisted? || !password.nil? || !password_confirmation.nil? if !uid?
   end
 end
