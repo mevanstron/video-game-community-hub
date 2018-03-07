@@ -1,0 +1,22 @@
+<h1><h3>Review for <%= video_game.title %></h3></h1>
+<%= render partial: 'layouts/error_message', collection: review.errors.full_messages %>
+<%= form_for [video_game, review] do |f| %>
+  <div>
+    <%= f.hidden_field :video_game_id %>
+  </div>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :rating %>
+    <%= f.select(:rating, [1,2,3,4,5], {include_blank: "- Select -"}) %>
+  </div>
+  <div>
+    <%= f.label :content %>
+    <%= f.text_area :content, cols: 80, rows: 20 %>
+  </div>
+  <div>
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

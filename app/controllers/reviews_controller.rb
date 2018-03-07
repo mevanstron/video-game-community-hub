@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
-  before_action :set_video_game, only: [:index, :new]
+  before_action :set_video_game, only: [:index, :new, :edit]
   before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
 
   def index
@@ -16,6 +16,7 @@ class ReviewsController < ApplicationController
       r.user_id = current_user.id
       r.save
     end
+
     if @review && @review.valid?
       redirect_to video_game_review_path(@review.video_game, @review)
     else
