@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td><%= link_to video_game.title, video_game %></td>
+    <% if user_video_game_review(video_game) %>
+      <td><%= link_to "Your Review", video_game_review_path(video_game, user_video_game_review(video_game)) %></td>
+    <% else %>
+      <td><%= link_to "Write a Review!", new_video_game_review_path(video_game) %> </td>
+    <% end %>
+    <td><%= button_to "Remove Game", user_video_game_path(video_game), method: :delete %> </td>
+  </tr>
+</table>

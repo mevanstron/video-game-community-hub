@@ -1,25 +1,12 @@
 <h1>Account Information</h1>
 
-<p>Nickname: <%= @user.nickname %></p>
-<p>Email: <%= @user.email %></p>
-<%= link_to "Edit", edit_user_path(@user) %> <%= button_to("Delete", @user, method: :delete) if "HIDE UNTIL FUTURE RELEASE" == true %>
+<p>Nickname: <%= current_user.nickname %></p>
+<p>Email: <%= current_user.email %></p>
+<p><%= link_to "Edit", edit_user_path %></p>
 
 <h3>Your Video Games</h3>
-<%= "Your collection is empty..." if current_user.video_games.empty? %>
+<p><%= "Your collection is empty..." if current_user.video_games.empty? %></p>
 
-<table>
-  <tr>
-    <td><%= link_to "Add a Game!", video_games_path %></td>
-  </tr>
-  <% @user.video_games.each do |video_game| %>
-  <tr>
-    <td><%= link_to video_game.title, video_game %></td>
-    <% if @user.reviews.find_by(video_game_id: video_game.id) %>
-      <td><%= link_to "Your Review", video_game_review_path(id: @user.reviews.find_by(video_game_id: video_game.id).id, video_game_id: video_game.id) %></td>  
-    <% else %>
-      <td><%= link_to "Write a Review!", new_video_game_review_path(video_game) %> </td>
-    <% end %>
-    <td><%= button_to "Remove Game", user_video_game_path(video_game), method: :delete %> </td>
-  </tr>
-  <% end %>
-</table>
+<p><%= link_to "Add a Game!", video_games_path %></p>
+
+<%= render partial: 'video_game', collection: @user.video_games %>

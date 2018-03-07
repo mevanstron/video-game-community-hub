@@ -2,7 +2,7 @@
 <table>
   <% @reviews.each do |review| %>
     <tr>
-      <td><%= link_to review.title, video_game_review_path(review.video_game_id, review) %></td>
+      <td><%= link_to review.title, video_game_review_path(@video_game, review) %></td>
     </tr>
   <% end %>
 </table>
