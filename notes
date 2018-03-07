@@ -173,5 +173,7 @@ Video Game Community Hub
       *COMPLETE* - This will select the game that has the largest count of reviews.
 
   12. Prevent logged out users from editing or deleting other user data.
+    *COMPLETE* - add require_login method to controller actions.
 
   13. Build omniauth log in option.
+    *COMPLETE* - add omniauth gems and code to allow users to login using facebook.

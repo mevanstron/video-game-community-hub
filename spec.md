@@ -22,7 +22,8 @@ Specs:
     *custom sessions controller, routes, and views.*
 - [x] Include logout (how e.g. Devise)
     *custom sessions controller, routes, and views.*
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth)
+    *users may login using facebook credentials, powered through OmniAuth*
 - [x] Include nested resource show or index (URL e.g. users/2/recipes)
     */video_games/1/reviews/1*
 - [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
