@@ -29,9 +29,7 @@ class VideoGamesController < ApplicationController
   end
 
   def update
-    @video_game.update(video_game_params)
-
-    if @video_game.valid?
+    if @video_game.update(video_game_params)
       redirect_to @video_game
     else
       render :edit

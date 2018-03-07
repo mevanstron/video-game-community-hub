@@ -34,5 +34,7 @@ Specs:
 Confirm:
 - [ ] The application is pretty DRY
 - [ ] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [x] Views use helper methods if appropriate
+    *user helper method created: user_video_game_review(video_game)*
+- [x] Views use partials if appropriate
+    *several partials have been created in views subdirectories.*

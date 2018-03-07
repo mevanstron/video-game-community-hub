@@ -1,5 +1,3 @@
 <h1>New Video Game</h1>
-
 <%= render partial: 'layouts/error_message', collection: @video_game.errors.full_messages  %>
-
 <%= render partial: 'form', locals: {video_game: @video_game, tags: @tags} %>

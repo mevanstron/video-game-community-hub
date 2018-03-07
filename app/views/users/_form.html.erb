@@ -1,0 +1,25 @@
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :email, "Email" %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :nickname, "Nickname" %>
+    <%= f.text_field :nickname %>
+  </div>
+
+  <% if !current_user %>
+    <div>
+      <%= f.label :password, "Password" %>
+      <%= f.password_field :password %>
+    </div>
+    <div>
+      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+  <% end %>
+  
+  <div>
+    <%= f.submit "Sign up" %> <%= link_to "Cancel", :back %>
+  </div>
+<% end %>

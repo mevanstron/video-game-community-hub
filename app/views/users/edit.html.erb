@@ -1,15 +1,3 @@
 <h1>Update Account Details</h1>
 <%= render partial: 'layouts/error_message', collection: @user.errors.full_messages %>
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.label :email, "Email" %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :nickname, "Nickname" %>
-    <%= f.text_field :nickname %>
-  </div>
-  <div>
-    <%= f.submit "Update" %> <%= link_to "Cancel", :back %>
-  </div>
-<% end %>
+<%= render partial: 'form', locals: {user: @user} %>
