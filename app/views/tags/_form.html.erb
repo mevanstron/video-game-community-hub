@@ -1,0 +1,9 @@
+<%= form_for tag do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :name, "New Tag" %></td>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.submit %></td>
+    </tr>
+  </table>
+<% end %>
