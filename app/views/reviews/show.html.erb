@@ -1,13 +1,13 @@
 <h1><%= @review.title %></h1>
-<h3>--<%= @review.video_game.title %>--</h3>
+<h3>--<%= @video_game.title %>--</h3>
 <p>Rating: <%= @review.rating %>/5</p>
 <p><%= @review.content %></p>
 
 <% if @review.user == current_user %>
 <table>
   <tr>
-    <td><%= link_to "Edit", edit_video_game_review_path(@review.video_game) %></td>
-    <td><%= button_to "Delete", video_game_review_path(@review.video_game), method: "delete" %></td>
+    <td><%= link_to "Edit", edit_video_game_review_path %></td>
+    <td><%= button_to "Delete", video_game_review_path, method: "delete" %></td>
   </tr>
 </table>
 <% end %>

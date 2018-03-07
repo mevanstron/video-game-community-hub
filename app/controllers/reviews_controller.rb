@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
-  before_action :set_video_game, only: [:index, :new, :edit]
+  before_action :set_video_game, only: [:index, :new, :create, :show, :edit, :update]
   before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
 
   def index
@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
     end
 
     if @review && @review.valid?
-      redirect_to video_game_review_path(@review.video_game, @review)
+      redirect_to video_game_review_path(@video_game, @review)
     else
       render :new
     end
@@ -31,10 +31,8 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    @review.update(review_params)
-
-    if @review.valid?
-      redirect_to video_game_review_path(@review.video_game, @review)
+    if @review.update(review_params)
+      redirect_to video_game_review_path(@video_game, @review)
     else
       render :edit
     end
