@@ -1,12 +1,11 @@
 <h1><%= @video_game.title %></h1>
 <p><%= @video_game.release_year %></p>
 <p><%= @video_game.console %></p>
-
-<p><%= if @video_game.tags.empty? then "This game has no tags." else "Tags:" end %></p>
-
-<%= render partial: 'tag', collection: @video_game.tags %>
-
-<p><%= link_to "Edit", edit_video_game_path(@video_game) %> | Delete button</p>
+<p>
+  <%= if @video_game.tags.empty? then "This game has no tags." else "Tags:" end %>
+  <%= render partial: 'tag', collection: @video_game.tags, locals: {video_game: @video_game} %>
+</p>
+<p><%= link_to "Edit", edit_video_game_path(@video_game) %></p>
 <p>
   <%= link_to "Write a Review!", new_video_game_review_path(@video_game) %>
    or

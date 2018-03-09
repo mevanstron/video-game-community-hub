@@ -1,8 +1,9 @@
 <h1>Tags</h1>
 <%= render partial: 'layouts/error_message', collection: @tag.errors.full_messages %>
-<%= render partial: 'form', locals: {tag: @tag} %>
 
-<table>
+
+<table class="table">
+  <%= render partial: 'form', locals: {tag: @tag} %>
   <% @tags.each do |tag| %>
     <tr>
       <td><%= tag.name %></td>

@@ -9,4 +9,6 @@
 
 <p><%= link_to "Add a Game!", video_games_path %></p>
 
-<%= render partial: 'video_game', collection: @user.video_games %>
+<table class="table">
+  <%= render partial: 'video_game', collection: @user.video_games %>
+</table>

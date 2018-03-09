@@ -1,6 +1,6 @@
 <h1>Video Games</h1>
   <p><%= link_to "Add New Video Game", new_video_game_path %></p>
-<table>
+<table class="table">
   <% @video_games.each do |video_game| %>
   <tr>
     <td><%= link_to video_game.title, video_game %></td>

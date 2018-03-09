@@ -4,7 +4,7 @@
 <p><%= @review.content %></p>
 
 <% if @review.user == current_user %>
-<table>
+<table class="table">
   <tr>
     <td><%= link_to "Edit", edit_video_game_review_path %></td>
     <td><%= button_to "Delete", video_game_review_path, method: "delete" %></td>
