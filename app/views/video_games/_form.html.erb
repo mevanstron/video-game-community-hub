@@ -1,25 +1,29 @@
-<%= form_for video_game do |f| %>
-  <div>
+<%= form_for video_game, html: {class: "form form_container"} do |f| %>
+  <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title%>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :release_year, "Year Released" %>
     <%= f.text_field :release_year%>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :console %>
     <%= f.text_field :console%>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :tags %>
-    <%= f.collection_check_boxes :tag_ids, tags, :id, :name %>
+    <%= f.collection_check_boxes :tag_ids, tags, :id, :name do |b| %>
+      <div class="form-check">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
   </div>
 
-  <p>New Tag:</p>
   <%= f.fields_for :tags, video_game.tags.build do |tags_fields| %>
-    <div>
-      <%= tags_fields.label :name %>
+    <div class="form-group">
+      <%= tags_fields.label :name, "New Tag" %>
       <%= tags_fields.text_field :name %>
     </div>
   <% end %>
