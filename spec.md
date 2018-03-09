@@ -32,8 +32,10 @@ Specs:
     *errors display for all new and edit forms.*
 
 Confirm:
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
+- [x] The application is pretty DRY
+    *using helper methods and instance variables to reduce repeated code.*
+- [x] Limited logic in controllers
+    *controllers have been refactored to stay as thin as possible.*
 - [x] Views use helper methods if appropriate
     *user helper method created: user_video_game_review(video_game)*
 - [x] Views use partials if appropriate
