@@ -6,7 +6,7 @@
   <%= render partial: 'form', locals: {tag: @tag} %>
   <% @tags.each do |tag| %>
     <tr>
-      <td><%= tag.name %></td>
+      <td><%= link_to tag.name, tag %></td>
       <td><%= button_to "Delete", tag_path(tag), method: "delete" %></td>
     </tr>
   <% end %>

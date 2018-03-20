@@ -13,6 +13,7 @@ class VideoGamesController < ApplicationController
 
   def create
     @video_game = VideoGame.create(video_game_params)
+    @tags = Tag.all
 
     if @video_game.valid?
       redirect_to video_game_path(@video_game)
@@ -29,6 +30,8 @@ class VideoGamesController < ApplicationController
   end
 
   def update
+    @tags = Tag.all
+    
     if @video_game.update(video_game_params)
       redirect_to @video_game
     else

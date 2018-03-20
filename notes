@@ -177,3 +177,9 @@ Video Game Community Hub
 
   13. Build omniauth log in option.
     *COMPLETE* - add omniauth gems and code to allow users to login using facebook.
+
+  14. Search for game by tags - feature
+
+    a) Create Tag show page, that displays all video games that have the given tag.
+      *COMPLETE* - build tags/show.html.erb
+      *COMPLETE* - hyperlink to show page on each tag from videogame show page.

@@ -16,6 +16,14 @@ class TagsController < ApplicationController
     end
   end
 
+  def show
+    @tag = Tag.find(params[:id])
+    @video_games = @tag.video_games
+    # VideoGame.all.each do |video_game|
+    #   @tag.video_games << videogame if video_game.tags.include?(@tag) && !@tag.video_games.include?(video_game)
+    # end
+  end
+
   def destroy
     @tag = Tag.find(params[:id])
     @tag.destroy
