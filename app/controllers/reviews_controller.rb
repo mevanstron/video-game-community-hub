@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :set_video_game, only: [:index, :new, :create, :show, :edit, :update]
   before_action :require_login, only: [:index, :new, :create, :edit, :update, :destroy]
+  before_action :prevent_duplicate_review, only: [:new]
 
   def index
     @reviews = @video_game.reviews
