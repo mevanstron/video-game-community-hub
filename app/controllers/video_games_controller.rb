@@ -23,6 +23,10 @@ class VideoGamesController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @video_game }
+    end
   end
 
   def edit
@@ -31,7 +35,7 @@ class VideoGamesController < ApplicationController
 
   def update
     @tags = Tag.all
-    
+
     if @video_game.update(video_game_params)
       redirect_to @video_game
     else
