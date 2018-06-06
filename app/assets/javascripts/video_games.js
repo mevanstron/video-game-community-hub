@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  addVideoGames();
+});
+
+function addVideoGames() {
+  //creates table rows and columns that house individual video game links and add to collection buttons.
   $.get("/video_games", function(data) {
     for(var i = 0; i < data.length; i++) {
       $("#vg_tbody").append(
@@ -9,20 +14,26 @@ $(document).ready(function() {
           <td id="vg_${data[i]["id"]}_button_td"></td>
         </tr>`
       );
-      var userHasGame = false;
-      for (var k = 0; k < data[i]["users"].length; k++)
-      {
-        
-        if (data[i]["users"][k]["id"] == $("#userId")[0].value)
-        {
-          userHasGame = true;
-        }
-      }
-      if (userHasGame == false) {
-        $(`#vg_${data[i]["id"]}_button_td`).append(
-          `<button>Add to Collection</button>`
-        )
-      }
+      //iterates through all videogames checking to see if user has the game.
+      addToCollection(data, i);
     }
   }, "json");
-});
+}
+
+function addToCollection(json, videoGame) {
+  let userHasGame = false;
+  //checks all users for videogame for match to current user
+  for (var i = 0; i < json[videoGame]["users"].length; i++)
+  {
+    if (json[videoGame]["users"][i]["id"] == $("#userId")[0].value)
+    {
+      userHasGame = true;
+    }
+  }
+  //if no match was detected to current user, the add to collection button is added.
+  if (userHasGame == false) {
+    $(`#vg_${json[videoGame]["id"]}_button_td`).append(
+      `<button>Add to Collection</button>`
+    )
+  }
+}
