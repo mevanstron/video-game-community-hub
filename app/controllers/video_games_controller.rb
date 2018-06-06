@@ -4,6 +4,11 @@ class VideoGamesController < ApplicationController
 
   def index
     @video_games = VideoGame.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @video_games }
+    end
   end
 
   def new

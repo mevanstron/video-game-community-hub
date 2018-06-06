@@ -32,6 +32,7 @@ gem 'dotenv-rails'
 
 gem 'pry'
 
+gem 'jquery-rails'
 gem 'active_model_serializers'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
