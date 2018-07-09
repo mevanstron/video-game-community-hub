@@ -15,12 +15,12 @@ function addVideoGames() {
         </tr>`
       );
       //iterates through all videogames checking to see if user has the game.
-      addToCollection(data, i);
+      addVideoGameButton(data, i);
     }
   }, "json");
 }
 
-function addToCollection(json, videoGame) {
+function addVideoGameButton(json, videoGame) {
   let userHasGame = false;
   //checks all users for videogame for match to current user
   for (var i = 0; i < json[videoGame]["users"].length; i++)
@@ -33,7 +33,11 @@ function addToCollection(json, videoGame) {
   //if no match was detected to current user, the add to collection button is added.
   if (userHasGame == false) {
     $(`#vg_${json[videoGame]["id"]}_button_td`).append(
-      `<button>Add to Collection</button>`
+      `<button onClick="addToCollection()">Add to Collection</button>`
     )
+  }
+
+  function addToCollection() {
+    //listens for click event to add videogame to user's collection
   }
 }
