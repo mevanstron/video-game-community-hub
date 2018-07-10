@@ -1,6 +1,11 @@
 $(document).ready(function() {
   addVideoGames();
+  addVideoGame();
 });
+
+function addVideoGame() {
+  //adds videogame content to video game show page.
+}
 
 function addVideoGames() {
   //creates table rows and columns that house individual video game links and add to collection buttons.

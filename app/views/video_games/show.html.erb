@@ -1,6 +1,6 @@
-<h1><%= @video_game.title %></h1>
-<p><%= @video_game.release_year %></p>
-<p><%= @video_game.console %></p>
+<h1 id="vg_title"><%= @video_game.title %></h1>
+<p id="vg_release_year"><%= @video_game.release_year %></p>
+<p id="vg_console"><%= @video_game.console %></p>
 <p>
   <%= if @video_game.tags.empty? then "This game has no tags." else "Tags:" end %>
   <%= render partial: 'tag', collection: @video_game.tags, locals: {video_game: @video_game} %>
