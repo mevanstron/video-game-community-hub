@@ -5,6 +5,13 @@ $(document).ready(function() {
 
 function addVideoGame() {
   //adds videogame content to video game show page.
+  let vgPathArray = $(document.location)[0]["pathname"].split('/');
+  $.get(`/video_games/${vgPathArray[vgPathArray.length - 1]}`, function(data) {
+    $("#vg_title").append(data["title"])
+    $("#vg_release_year").append(data["release_year"])
+    $("#vg_console").append(data["console"])
+
+  }, "json");
 }
 
 function addVideoGames() {
