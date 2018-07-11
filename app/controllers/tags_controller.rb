@@ -22,6 +22,11 @@ class TagsController < ApplicationController
     # VideoGame.all.each do |video_game|
     #   @tag.video_games << videogame if video_game.tags.include?(@tag) && !@tag.video_games.include?(video_game)
     # end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @tag }
+    end
   end
 
   def destroy
