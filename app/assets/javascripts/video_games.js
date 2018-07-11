@@ -3,6 +3,11 @@ $(document).ready(function() {
   addVideoGame();
 });
 
+function addVidegoGameTags() {
+//adds tags to video game show page.
+
+}
+
 function addVideoGame() {
   //adds videogame content to video game show page.
   let vgPathArray = $(document.location)[0]["pathname"].split('/');
@@ -11,13 +16,18 @@ function addVideoGame() {
     $("#vg_release_year").append(data["release_year"])
     $("#vg_console").append(data["console"])
 
+    for (var i = 0; i < data["tags"].length; i++) {
+      $("#vg_tags").append(
+        ` <a href="/tags/${data["tags"][i]["id"]}">${data["tags"][i]["name"]}</a> |`
+      );
+    }
   }, "json");
 }
 
 function addVideoGames() {
   //creates table rows and columns that house individual video game links and add to collection buttons.
   $.get("/video_games", function(data) {
-    for(var i = 0; i < data.length; i++) {
+    for (var i = 0; i < data.length; i++) {
       $("#vg_tbody").append(
         `<tr id="vg_${data[i]["id"]}_tr">
           <td>
