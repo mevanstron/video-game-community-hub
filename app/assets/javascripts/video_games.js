@@ -1,7 +1,7 @@
-$(document).ready(function() {
+document.addEventListener("turbolinks:load", function() {
   addVideoGames();
   addVideoGame();
-});
+})
 
 function addVidegoGameTags() {
 //adds tags to video game show page.
