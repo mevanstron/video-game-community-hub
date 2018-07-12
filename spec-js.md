@@ -8,7 +8,8 @@ Specs:
   *video games controller contains json rendering for the index action. video_game.js contains addVideoGames() function to add json content to the index page.*
 - [x] Include at least one has_many relationship in information rendered via JSON and appended to the DOM.
   *video game has many tags. video game show page loads tags through js.*
-- [ ] Use your Rails API and a form to create a resource and render the response without a page refresh.
+- [x] Use your Rails API and a form to create a resource and render the response without a page refresh.
+  *tags index has a Add Tag form that creates a new tag through an API call and displays the new tag at the bottom of the index table.*
 - [ ] Translate JSON responses into js model objects.
 - [ ] At least one of the js model objects must have at least one method added by your code to the prototype.
 
