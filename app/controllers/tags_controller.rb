@@ -9,11 +9,13 @@ class TagsController < ApplicationController
     @tags = Tag.all
     @tag = Tag.create(tag_params)
 
-    if @tag.valid?
-      redirect_to tags_path
-    else
-      render :index
-    end
+    render json: @tag, status: 201
+
+    # if @tag.valid?
+    #   redirect_to tags_path
+    # else
+    #   render :index
+    # end
   end
 
   def show
