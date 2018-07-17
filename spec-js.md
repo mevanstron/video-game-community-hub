@@ -10,8 +10,10 @@ Specs:
   *video game has many tags. video game show page loads tags through js.*
 - [x] Use your Rails API and a form to create a resource and render the response without a page refresh.
   *tags index has a Add Tag form that creates a new tag through an API call and displays the new tag at the bottom of the index table.*
-- [ ] Translate JSON responses into js model objects.
-- [ ] At least one of the js model objects must have at least one method added by your code to the prototype.
+- [x] Translate JSON responses into js model objects.
+  *VideoGame object is defined in video_games.js*
+- [x] At least one of the js model objects must have at least one method added by your code to the prototype.
+  *renderTR() is a function defined on the VideoGame Prototype.*
 
 Confirm
 - [x] You have a large number of small Git commits
