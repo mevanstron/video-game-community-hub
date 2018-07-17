@@ -12,6 +12,10 @@ function VideoGame(attributes) {
   this.tags = attributes.tags;
 }
 
+VideoGame.prototype.renderTR = function() {
+  
+}
+
 function addVideoGame() {
   //adds videogame content to video game show page.
   let vgPathArray = $(document.location)[0]["pathname"].split('/');
@@ -35,6 +39,9 @@ function addVideoGames() {
   //creates table rows and columns that house individual video game links and add to collection buttons.
   $.get("/video_games", function(data) {
     for (var i = 0; i < data.length; i++) {
+      let videoGame = new VideoGame(data[i]);
+      let videoGameTr = item.renderTR();
+      debugger;
       $("#vg_tbody").append(
         `<tr id="vg_${data[i]["id"]}_tr">
           <td>
