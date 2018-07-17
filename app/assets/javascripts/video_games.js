@@ -22,8 +22,11 @@ function addVideoGame() {
 
     for (var i = 0; i < data["tags"].length; i++) {
       $("#vg_tags").append(
-        ` <a href="/tags/${data["tags"][i]["id"]}">${data["tags"][i]["name"]}</a> |`
+        ` <a href="/tags/${data["tags"][i]["id"]}">${data["tags"][i]["name"]}</a>`
       );
+      if (i != data["tags"].length - 1) {
+        $("#vg_tags").append(" |");
+      }
     }
   }, "json");
 }
