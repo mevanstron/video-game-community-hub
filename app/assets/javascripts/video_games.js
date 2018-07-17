@@ -1,6 +1,9 @@
 document.addEventListener("turbolinks:load", function() {
   addVideoGames();
   addVideoGame();
+
+  VideoGame.templateSource = $("#video_game_template").html();
+  VideoGame.template = Handlebars.compile(VideoGame.templateSource);
 })
 
 function VideoGame(attributes) {
@@ -13,7 +16,7 @@ function VideoGame(attributes) {
 }
 
 VideoGame.prototype.renderTR = function() {
-  
+  return VideoGame.template(this);
 }
 
 function addVideoGame() {
@@ -40,16 +43,11 @@ function addVideoGames() {
   $.get("/video_games", function(data) {
     for (var i = 0; i < data.length; i++) {
       let videoGame = new VideoGame(data[i]);
-      let videoGameTr = item.renderTR();
-      debugger;
-      $("#vg_tbody").append(
-        `<tr id="vg_${data[i]["id"]}_tr">
-          <td>
-            <a href="/video_games/${data[i]["id"]}">${data[i]["title"]}</a>
-          </td>
-          <td id="vg_${data[i]["id"]}_button_td"></td>
-        </tr>`
-      );
+      let videoGameTr = videoGame.renderTR();
+
+      $("#vg_tbody").append(videoGameTr)
+
+
       //iterates through all videogames checking to see if user has the game.
       addVideoGameButton(data, i);
     }
