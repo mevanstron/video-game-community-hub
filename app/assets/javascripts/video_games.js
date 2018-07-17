@@ -3,9 +3,13 @@ document.addEventListener("turbolinks:load", function() {
   addVideoGame();
 })
 
-function addVidegoGameTags() {
-//adds tags to video game show page.
-
+function VideoGame(attributes) {
+  this.title = attributes.title;
+  this.id = attributes.id;
+  this.release_year = attributes.release_year;
+  this.console = attributes.console;
+  this.users = attributes.users;
+  this.tags = attributes.tags;
 }
 
 function addVideoGame() {
