@@ -1,10 +1,19 @@
-document.addEventListener("turbolinks:load", function() {
+// document.addEventListener("turbolinks:load", function() {
+//   addVideoGames();
+//   addVideoGame();
+//
+//   VideoGame.templateSource = $("#video_game_template").html();
+//   VideoGame.template = Handlebars.compile(VideoGame.templateSource);
+// })
+
+$(document).ready(function() {
+  console.log("HEllo")
   addVideoGames();
   addVideoGame();
 
   VideoGame.templateSource = $("#video_game_template").html();
   VideoGame.template = Handlebars.compile(VideoGame.templateSource);
-})
+});
 
 function VideoGame(attributes) {
   this.title = attributes.title;
