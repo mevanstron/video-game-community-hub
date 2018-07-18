@@ -16,7 +16,7 @@
 
 <script id="add_to_collection_template" type="text/x-handlebars-template">
   <form class="add_vg" id="add_vg_{{vgId}}" action="/user_video_games" accept-charset="UTF-8" method="post">
-    <input type="hidden" name="videoGameId" id="video_game_id_{{vgId}}" value="${json[videoGame]['id']}">
+    <input type="hidden" name="videoGameId" id="video_game_id_{{vgId}}" value="{{vgId}}">
     <input type="submit" value="Add to Collection"></input>
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   </form>

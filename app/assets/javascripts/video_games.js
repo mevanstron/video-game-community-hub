@@ -76,9 +76,13 @@ function addVideoGameButton(json, videoGameIndex) {
   }
   //if no match was detected to current user, the add to collection button is added.
   if (userHasGame == false) {
-    let addButton = Handlebars.compile($("#add_to_collection_template").html());
-    $(`#vg_${vgId}_button_td`).append(addButton)
-    addToCollection();
+    let source = $("#add_to_collection_template").html();
+    let template = Handlebars.compile(source);
+
+    let context = {"vgId": vgId };
+    let html = template(context);
+
+    $(`#vg_${vgId}_button_td`).append(html)
   }
 }
 
@@ -87,7 +91,7 @@ function addToCollection() {
   userId = $("#userId")[0].value
   $('.add_vg').submit(function(event) {
     event.preventDefault();
-
+    console.log("addToCollection");
 
 
   });
