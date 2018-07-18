@@ -62,12 +62,14 @@ function addVideoGames() {
   }, "json");
 }
 
-function addVideoGameButton(json, vgId) {
+function addVideoGameButton(json, videoGameIndex) {
+
+  let vgId = videoGameIndex + 1;
   let userHasGame = false;
   //checks all users for videogame for match to current user
-  for (var i = 0; i < json[vgId]["users"].length; i++)
+  for (var i = 0; i < json[videoGameIndex]["users"].length; i++)
   {
-    if (json[vgId]["users"][i]["id"] == $("#userId")[0].value)
+    if (json[videoGameIndex]["users"][i]["id"] == $("#userId")[0].value)
     {
       userHasGame = true;
     }
