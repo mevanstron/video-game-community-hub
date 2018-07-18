@@ -7,7 +7,6 @@
 // })
 
 $(document).ready(function() {
-  console.log("HEllo")
   addVideoGames();
   addVideoGame();
 
@@ -63,24 +62,31 @@ function addVideoGames() {
   }, "json");
 }
 
-function addVideoGameButton(json, videoGame) {
+function addVideoGameButton(json, vgId) {
   let userHasGame = false;
   //checks all users for videogame for match to current user
-  for (var i = 0; i < json[videoGame]["users"].length; i++)
+  for (var i = 0; i < json[vgId]["users"].length; i++)
   {
-    if (json[videoGame]["users"][i]["id"] == $("#userId")[0].value)
+    if (json[vgId]["users"][i]["id"] == $("#userId")[0].value)
     {
       userHasGame = true;
     }
   }
   //if no match was detected to current user, the add to collection button is added.
   if (userHasGame == false) {
-    $(`#vg_${json[videoGame]["id"]}_button_td`).append(
-      `<button onClick="addToCollection()">Add to Collection</button>`
-    )
+    let addButton = Handlebars.compile($("#add_to_collection_template").html());
+    $(`#vg_${vgId}_button_td`).append(addButton)
+    addToCollection();
   }
+}
 
-  function addToCollection() {
-    //listens for click event to add videogame to user's collection
-  }
+function addToCollection() {
+  //listens for click event to add videogame to user's collection
+  userId = $("#userId")[0].value
+  $('.add_vg').submit(function(event) {
+    event.preventDefault();
+
+
+
+  });
 }
