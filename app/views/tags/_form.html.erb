@@ -1,6 +1,6 @@
 <%= form_for tag do |f| %>
     <tr>
-      <td><%= f.text_field :name %></td>
-      <td><%= f.submit %></td>
+      <td><%= f.text_field :name, id: "tag_text_box" %></td>
+      <td><%= f.submit "Create Tag", id: "submit_tag", data: { disable_with: false } %></td>
     </tr>
 <% end %>

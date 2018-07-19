@@ -14,16 +14,18 @@ function addTag() {
     let posting = $.post('/tags', values);
 
     posting.done(function(data) {
-      $("#tag_tbody").append(
-        `<tr>
-          <td>
-            <a href="/tags/${data["id"]}">${data["name"]}</a>
-          </td>
-          <td>
-          </td>
-        </tr>`
-      );
+      if (data["id"]) {
+        $("#tag_tbody").append(
+          `<tr>
+            <td>
+              <a href="/tags/${data["id"]}">${data["name"]}</a>
+            </td>
+            <td>
+            </td>
+          </tr>`
+        );
+      }
     });
+    $("#tag_text_box")[0]["value"] = ""
   });
-
 }
