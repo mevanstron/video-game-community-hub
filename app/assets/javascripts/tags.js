@@ -1,7 +1,3 @@
-// document.addEventListener("turbolinks:load", function() {
-//   addTag();
-// })
-
 $(document).ready(function() {
   addTag();
 })
@@ -15,16 +11,6 @@ function addTag() {
 
     posting.done(function(data) {
       if (data["id"]) {
-        // $("#tag_tbody").append(
-        //   `<tr>
-        //     <td>
-        //       <a href="/tags/${data["id"]}">${data["name"]}</a>
-        //     </td>
-        //     <td>
-        //     </td>
-        //   </tr>`
-        // );
-
         let source = $("#new_tag_template").html();
         let template = Handlebars.compile(source);
 
@@ -32,8 +18,21 @@ function addTag() {
         let html = template(context);
 
         $("#tag_tbody").append(html)
+        deleteTag();
       }
     });
     $("#tag_text_box")[0]["value"] = "";
+  });
+}
+
+function deleteTag() {
+  //listens for click event to delete tag
+
+  $(`.delete_tag`).unbind('submit').bind('submit', function(event) {
+    event.preventDefault();
+    let values = $(this).serialize();
+    let posting = $.post(`/tags/${this["tag_id"]["value"]}`, values);
+
+    $(`#tr_${this["tag_id"]["value"]}`).empty()
   });
 }

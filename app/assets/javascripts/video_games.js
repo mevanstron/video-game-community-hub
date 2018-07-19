@@ -27,14 +27,13 @@ function addVideoGames() {
 
       $("#vg_tbody").append(videoGameTr)
 
-      //iterates through all videogames checking to see if user has the game.
       addVideoGameButton(data, i);
     }
   }, "json");
 }
 
 function addVideoGameButton(json, videoGameIndex) {
-
+//iterates through all videogames checking to see if user has the game.
   let vgId = videoGameIndex + 1;
   let userHasGame = false;
   //checks all users for videogame for match to current user
@@ -68,8 +67,5 @@ function addToCollection() {
     let posting = $.post('user_video_games', values);
 
     $(this).empty()
-
-
-
   });
 }
