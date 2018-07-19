@@ -27,7 +27,6 @@ function addVideoGames() {
 
       $("#vg_tbody").append(videoGameTr)
 
-
       //iterates through all videogames checking to see if user has the game.
       addVideoGameButton(data, i);
     }
