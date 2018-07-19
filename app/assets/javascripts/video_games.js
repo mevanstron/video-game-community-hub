@@ -7,6 +7,7 @@
 // })
 
 $(document).ready(function() {
+  //let userId = $("#userId")[0].value
   addVideoGames();
   addVideoGame();
 
@@ -79,19 +80,25 @@ function addVideoGameButton(json, videoGameIndex) {
     let source = $("#add_to_collection_template").html();
     let template = Handlebars.compile(source);
 
-    let context = {"vgId": vgId };
+    let context = {"vgId": vgId, "userId": userId };
     let html = template(context);
 
     $(`#vg_${vgId}_button_td`).append(html)
+
+    addToCollection();
   }
 }
 
 function addToCollection() {
   //listens for click event to add videogame to user's collection
-  userId = $("#userId")[0].value
-  $('.add_vg').submit(function(event) {
+  $(`.add_vg`).unbind('submit').bind('submit', function(event) {
     event.preventDefault();
-    console.log("addToCollection");
+
+    let values = $(this).serialize();
+    let posting = $.post('user_video_games', values);
+
+    $(this).empty()
+
 
 
   });

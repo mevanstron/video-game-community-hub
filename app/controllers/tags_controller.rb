@@ -9,8 +9,11 @@ class TagsController < ApplicationController
     @tags = Tag.all
     @tag = Tag.create(tag_params)
 
-    render json: @tag, status: 201
 
+    respond_to do |format|
+      format.html { redirect_to tags_path }
+      format.json { render json: @tag, status: 201 }
+    end
     # if @tag.valid?
     #   redirect_to tags_path
     # else
