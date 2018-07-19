@@ -13,3 +13,18 @@
     <% end %>
   </tbody>
 </table>
+
+<script id="new_tag_template" type="text/x-handlebars-template">
+  <tr>
+    <td>
+      <a href="/tags/{{tagId}}">{{tagName}}</a>
+    </td>
+    <td>
+      <form class="delete_tag" id="delete_tag_{{tagId}}" action="/tags/{{tagId}}" accept-charset="UTF-8" method="post">
+        <input name="_method" type="hidden" value="delete" />
+        <input type="submit" value="Delete"></input>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      </form>
+    </td>
+  </tr>
+</script>
