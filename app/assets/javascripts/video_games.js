@@ -37,10 +37,8 @@ function addVideoGameButton(json, videoGameIndex) {
   let vgId = videoGameIndex + 1;
   let userHasGame = false;
   //checks all users for videogame for match to current user
-  for (var i = 0; i < json[videoGameIndex]["users"].length; i++)
-  {
-    if (json[videoGameIndex]["users"][i]["id"] == $("#userId")[0].value)
-    {
+  for (var i = 0; i < json[videoGameIndex]["users"].length; i++) {
+    if (json[videoGameIndex]["users"][i]["id"] == $("#userId")[0].value) {
       userHasGame = true;
     }
   }
