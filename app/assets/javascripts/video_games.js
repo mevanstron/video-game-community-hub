@@ -1,6 +1,8 @@
 $(document).ready(function() {
   addVideoGames();
 
+  $('#vg-sort-link').click(vgSort);
+
   VideoGame.templateSource = $("#video_game_template").html();
   VideoGame.template = Handlebars.compile(VideoGame.templateSource);
 });
@@ -66,4 +68,28 @@ function addToCollection() {
 
     $(this).empty()
   });
+}
+
+function vgSort() {
+  $.get("/video_games", function(data) {
+
+    data.sort(function(a, b){
+    var x = a["title"].toLowerCase();
+    var y = b["title"].toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+  });
+
+  $("#vg_tbody").empty();
+    for (var i = 0; i < data.length; i++) {
+      let videoGame = new VideoGame(data[i]);
+      let videoGameTr = videoGame.renderTR();
+
+
+      $("#vg_tbody").append(videoGameTr);
+
+      addVideoGameButton(data, i);
+    }
+  }, "json");
 }
