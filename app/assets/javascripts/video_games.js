@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $.ajaxSetup({ cache: false });
   addVideoGames();
 
   $('#vg-sort-link').click(vgSort);
